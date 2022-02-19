@@ -16,7 +16,7 @@ Người dùng **root** là người dùng quản trị trong môi trường Lin
 Để đăng nhập vào tài khoản **root** bạn sử dụng lệnh sau:
         
         sudo su
-Sau khi đăng nhập bằng quyền **root**. Bước tiếp theo là thiết lập một tài khoản người dùng mới với các đặc quyền giảm bớt để sử dụng hàng ngày.
+Sau khi đăng nhập bằng quyền **root**. Chúng ta thiết lập một tài khoản người dùng mới với các đặc quyền giảm bớt để sử dụng hàng ngày.
 
 **Bước 2 - Tạo người dùng mới**
 
