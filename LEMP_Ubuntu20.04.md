@@ -65,4 +65,4 @@ Kết quả hiển thị:
         To run a command as administrator (user "root"), use "sudo <command>".
         See "man sudo_root" for details.
         admin@ubuntu:~$
-# I. Cài đặt máy chủ Web Nginx
+## I. Cài đặt máy chủ Web Nginx
