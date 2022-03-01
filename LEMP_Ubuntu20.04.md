@@ -59,8 +59,9 @@ Kết quả hiển thị:
         OpenSSH (v6)               ALLOW       Anywhere (v6)
 **=> Như vậy chúng ta đã hoàn thành các thiết lập ban đầu của máy chủ.**
 
-**Bây giờ, các bạn cần đăng xuất khỏi khoản root và đăng nhập vào tài khoản siêu cấp admin**
+**Bây giờ, các bạn cần thoát khỏi tài khoản root, đăng xuất khỏi hệ thống. Sau đó đăng nhập vào tài khoản siêu cấp admin**
 
+        exit
         logout
 **Sử dụng tài khoản siêu cấp để đăng nhập, sau đây là kết quả hiển thị:**
 
