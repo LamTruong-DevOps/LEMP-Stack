@@ -1,11 +1,13 @@
 # Install Linux, Nginx, MySQL, PHP on Ubuntu 20.04
 ![LEMP](https://user-images.githubusercontent.com/97789851/154805186-c95aca00-a3f3-4d16-bd2a-7c19d7343a3b.png)
+
 ## Giới thiệu
 **LEMP** là một nhóm các phần mềm có thể dùng để phục vụ các trang web động và các ứng dụng web được viết bằng PHP. Đây là từ viết tắt mô tả hệ điều hành **L**inux, với máy chủ web Nginx (phát âm như “ **E**ngine-X”). Dữ liệu backend được lưu trữ trong cơ sở dữ liệu **M**ySQL và xử lý bởi ngôn ngữ **P**HP.
 
 ***Lam Trường*** sẽ hướng dẫn các bạn cách cài đặt ngăn xếp **LEMP** trên máy chủ Ubuntu 20.04. Hệ điều hành Ubuntu hoàn thành yêu cầu đầu tiên vì nó được phát triển dựa trên **L**inux. Mình sẽ mô tả cách cài đặt và cấu hình các thành phần còn lại ngay phía dưới. 
 
 **Cùng theo dõi nhé!! Chúc các bạn thành công :>**
+
 ## Thiết lập ban đầu
 Người dùng **root** là người dùng quản trị trong môi trường Linux có các đặc quyền rất rộng. Do các đặc quyền cao của tài khoản root, bạn không nên sử dụng nó một cách thường xuyên. Tài khoản **root** có thể thực hiện các thay đổi rất nguy hiểm, thậm chí là do tình cờ.
 
@@ -68,4 +70,42 @@ Kết quả hiển thị:
         To run a command as administrator (user "root"), use "sudo <command>".
         See "man sudo_root" for details.
         admin@ubuntu:~$
+
 ## I. Cài đặt máy chủ Web Nginx
+Để hiển thị các trang web thì mình sẽ sử dụng **Nginx**, một máy chủ web hiệu suất cao. Mình sẽ sử dụng **apt** để cài đặt phần mềm này.
+
+Vì đây là lần đầu tiên sử dụng **apt** cho phiên này, chúng ta phải cập nhật các gói cài đặt của máy chủ. Sau đó, bạn có thể sử dụng **apt install** để cài đặt **Nginx**:
+
+        sudo apt update
+        sudo apt install nginx
+Nhấn enter để xác nhận rằng các bạn muốn cài đặt **Nginx**. Sau khi cài đặt xong, máy chủ web **Nginx** sẽ hoạt động và chạy trên máy chủ Ubuntu 20.04 của các bạn.
+
+Nếu bạn đã bật tường lửa **UFW**, theo hướng dẫn thiết lập máy chủ ban đầu của mình, các bạn phải cho phép kết nối với **Nginx**. Vì **Nginx** đăng ký một số cấu hình ứng dụng UFW khác nhau khi cài đặt. Để kiểm tra cấu hình UFW nào khả dụng, dùng lệnh:
+
+        sudo ufw app list
+Hệ thống hiển thị:
+
+        Available applications:
+        Nginx Full
+        Nginx HTTP
+        Nginx HTTPS
+        OpenSSH
+Các bạn nên bật cấu hình hạn chế nhất nhưng vẫn cho phép lưu lượng truy cập mà các bạn cần đến **Nginx**. Vì các bạn chưa định cấu hình SSL cho máy chủ của mình trong hướng dẫn này, các bạn sẽ chỉ cần cho phép lưu lượng HTTP thông thường trên cổng 80.
+
+Kích hoạt tính năng này bằng lệnh sau:
+
+        sudo ufw allow 'Nginx HTTP'
+Kiểm tra lại **Nginx** đã được thông qua tường lửa **UFW** các bạn dùng lệnh:
+
+        sudo ufw status
+Kết quả hiển thị của lệnh này sẽ cho thấy rằng lưu lượng HTTP hiện đã được phép:
+
+        Status: active
+
+        To                         Action      From
+        --                         ------      ----
+        OpenSSH                    ALLOW       Anywhere
+        Nginx HTTP                 ALLOW       Anywhere
+        OpenSSH (v6)               ALLOW       Anywhere (v6)
+        Nginx HTTP (v6)            ALLOW       Anywhere (v6)
+**=> Bây giờ các bạn hãy sử dụng trình duyệt Internet trên máy của các bạn để kiểm tra xem máy chủ **Nginx** đã hoạt động hay chưa bằng cách truy cập vào địa chỉ IP của server.**
