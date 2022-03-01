@@ -113,3 +113,7 @@ Kết quả hiển thị của lệnh này sẽ cho thấy rằng lưu lượng 
 **=> Bây giờ các bạn hãy sử dụng trình duyệt Internet trên máy của các bạn để kiểm tra xem máy chủ **Nginx** đã hoạt động hay chưa bằng cách truy cập vào địa chỉ IP của server.**
 
 ![nginx2](https://user-images.githubusercontent.com/97789851/156149620-f87db105-31bc-4c54-8408-30f0e44dc9fb.png)
+
+**Nếu các bạn thấy trang này, điều đó có nghĩa là các bạn đã cài đặt thành công Nginx và kích hoạt lưu lượng HTTP cho máy chủ web của mình.**
+
+## II. Cài đặt MySQL
