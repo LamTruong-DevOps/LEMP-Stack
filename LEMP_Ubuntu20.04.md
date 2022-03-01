@@ -72,6 +72,8 @@ Kết quả hiển thị:
         admin@ubuntu:~$
 
 ## I. Cài đặt máy chủ Web Nginx
+![nginx](https://user-images.githubusercontent.com/97789851/156149335-b0881455-c1b7-47c6-9536-b8979fcb9b88.png)
+
 Để hiển thị các trang web thì mình sẽ sử dụng **Nginx**, một máy chủ web hiệu suất cao. Mình sẽ sử dụng **apt** để cài đặt phần mềm này.
 
 Vì đây là lần đầu tiên sử dụng **apt** cho phiên này, chúng ta phải cập nhật các gói cài đặt của máy chủ. Sau đó, bạn có thể sử dụng **apt install** để cài đặt **Nginx**:
@@ -109,3 +111,5 @@ Kết quả hiển thị của lệnh này sẽ cho thấy rằng lưu lượng 
         OpenSSH (v6)               ALLOW       Anywhere (v6)
         Nginx HTTP (v6)            ALLOW       Anywhere (v6)
 **=> Bây giờ các bạn hãy sử dụng trình duyệt Internet trên máy của các bạn để kiểm tra xem máy chủ **Nginx** đã hoạt động hay chưa bằng cách truy cập vào địa chỉ IP của server.**
+
+![nginx2](https://user-images.githubusercontent.com/97789851/156149620-f87db105-31bc-4c54-8408-30f0e44dc9fb.png)
